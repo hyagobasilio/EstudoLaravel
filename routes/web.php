@@ -17,4 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('contato', 'ContatoController@index');
+Route::get('contato/create', 'ContatoController@create')->name('contato.create');
+Route::get('contato', 'ContatoController@index')->name('contato.index');
+Route::post('contato', 'ContatoController@store')->name('contato.store');
