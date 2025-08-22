@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,14 @@ Route::get('/', function () {
 Route::get('contato/create', 'ContatoController@create')->name('contato.create');
 Route::get('contato', 'ContatoController@index')->name('contato.index');
 Route::post('contato', 'ContatoController@store')->name('contato.store');
+
+
+Route::get('contact/create', 'ContactController@create')->name('contact.create');
+Route::get('contact', 'ContactController@index')->name('contact.index');
+Route::post('contact', 'ContactController@store')->name('contact.store');
+Route::get('/contact/{id}', 'ContactController@show')->name('contact.show');
+Route::get('/contact/{id}/edit', 'ContactController@edit')->name('contact.edit');
+Route::put('/contact/{id}', 'ContactController@update')->name('contact.update');
+Route::delete('/contact/{id}', 'ContactController@destroy')->name('contact.destroy');
+Route::get('/', 'ContactController@homepage')->name('contact.homepage');
+Route::get('/contacts', [ContactController::class, 'index'])->name('contacts.index');
