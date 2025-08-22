@@ -48,6 +48,14 @@
                         <li><a class="dropdown-item" href="{{ route('contato.create') }}">Cadastrar</a></li>
                     </ul>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle {{ request()->is('admin*') ? 'active' : '' }}"
+                        href="#" id="dropdownMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Contato Rafael</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{ route('contato.index') }}">Listar</a></li>
+                        <li><a class="dropdown-item" href="{{ route('contato.create') }}">Cadastrar</a></li>
+                    </ul>
+                </li>
             </ul>
 
         </div>
