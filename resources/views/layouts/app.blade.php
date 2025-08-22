@@ -122,6 +122,7 @@ a:hover {
                         <li><a class="dropdown-item" href="{{ route('contato.create') }}">Cadastrar</a></li>
                     </ul>
                 </li>
+<<<<<<< HEAD
                 </li>
                 </li>
                 <li class="nav-item dropdown">
@@ -136,6 +137,16 @@ a:hover {
                 <li class="nav-item">
                 <a class="nav-link disabled" aria-disabled="true"></a>
                 </li>
+=======
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle {{ request()->is('admin*') ? 'active' : '' }}"
+                        href="#" id="dropdownMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Contato Rafael</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{ route('contato.index') }}">Listar</a></li>
+                        <li><a class="dropdown-item" href="{{ route('contato.create') }}">Cadastrar</a></li>
+                    </ul>
+                </li>
+>>>>>>> 2bddb1954085dd226822a4e8e03e2874ea3a696a
             </ul>
             <form class="d-flex" role="search" action="{{ route('contact.index') }}" method="post">
                 <input class="form-control me-2" type="search" name="search" placeholder="Search" aria-label="Search"/>
